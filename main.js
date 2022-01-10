@@ -17,6 +17,7 @@ function setup(){
 }
 function draw(){
     background('#969A97');
+    document.getElementById("font_size").innerHTML = "Font size of the text will be = " + difference +"px";
     fill('#F90093');
     textSize(difference);
     text('Krishna, 50,400');
@@ -34,5 +35,6 @@ if(results.length > 0)
     leftWristX = results[0].pose.leftWrist.x;
              rightWristX = results[0].pose.rightWrist.x; 
              difference = floor(leftWristX - rightWristX);
+     console.log("leftWristX = " + leftWristX + " rightWristX = "+ rightWristX + " difference = " + difference);
 }
 }
